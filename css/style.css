@@ -1,0 +1,184 @@
+/* Global */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --pad-marg: 22px;
+  --pad-margB: 22px 0;
+  --pad-margR: 0 22px;
+  --white-color: #fff;
+  --black-color: #000;
+  --background-color: #19233e;
+  --transition-3: 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+  background: linear-gradient(to right, #071030, #060f2f);
+}
+body {
+  display: flex;
+  justify-content: center;
+  height: 100dvh;
+  min-height: fit-content;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  transition: var(--transition-3);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  object-fit: cover;
+  object-position: center;
+}
+/* ====== Components ====== */
+.background {
+  background-color: var(--background-color);
+  border-radius: 12px;
+}
+.title {
+  position: relative;
+}
+.title::after,
+main .container .length .length-number {
+  font-size: 10px;
+  position: absolute;
+  top: -18px;
+  left: 8px;
+}
+/* ===== Main ======*/
+main {
+  min-width: 295px;
+  padding: var(--pad-margB);
+}
+main .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+main .container > * {
+  width: 100%;
+}
+/* === Password === */
+main .container h1 {
+  margin-bottom: 6px;
+}
+main .container .password {
+  padding: var(--pad-marg);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+}
+/* === Length === */
+main .container .length {
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+main .container .length.title::after {
+  content: "LENGTH :";
+}
+main .container .length .length-number {
+  left: 58px;
+}
+main .container .length input {
+  flex: 1;
+}
+/* === Settings === */
+main .container .settings::after {
+  content: "SETTINGS";
+}
+main .container .settings ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+main .container .settings ul li {
+  padding: var(--pad-marg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container .settings ul li .check {
+  height: 22px;
+  width: 50px;
+  border-radius: 22px;
+  background-color: #6a7183;
+  position: relative;
+  cursor: pointer;
+}
+main .container .settings ul li .check.active {
+  background: linear-gradient(35deg, #0097ff, #ff00ff);
+}
+main .container .settings ul li .check span {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 4px;
+  translate: 0px -50%;
+}
+main .container .settings ul li .active span {
+  left: calc(100% - 20px);
+}
+/* === Generate === */
+main .container .generate {
+  padding: var(--pad-marg);
+  background: linear-gradient(35deg, #0097ff, #ff00ff);
+  border-radius: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+main .container .generate:hover {
+  scale: 0.98;
+}
+/* Media */
+/* ====== Media-min ====== */
+@media (min-width: 475px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+@media (min-width: 640px) {
+  .container {
+    width: 610px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* ====== Media-max ====== */
+@media (max-width: 474px) {
+  main .container {
+    padding: 0px 12px;
+    scale: 0.95;
+  }
+  main .container > h1 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <!-- ====== CSSFiles ====== -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Password Generator</h1>
+        <div class="password background" style="word-wrap: break-word"></div>
+        <div class="length background title">
+          <span class="length-number">4</span>
+          <span>4</span>
+          <input type="range" class="length-input" min="4" max="45" value="4" />
+          <span>45</span>
+        </div>
+        <div class="settings title">
+          <ul>
+            <li class="background">
+              Lowercase
+              <div class="check lowercase active"><span></span></div>
+            </li>
+            <li class="background">
+              Uppercase
+              <div class="check uppercase"><span></span></div>
+            </li>
+            <li class="background">
+              Numbers
+              <div class="check numbers"><span></span></div>
+            </li>
+            <li class="background">
+              Symbols
+              <div class="check symbols"><span></span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="generate">New Password</div>
+      </div>
+    </main>
+    <!-- ====== JSFiles ====== -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
